@@ -104,9 +104,28 @@
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-api-progress</artifactId>
-            <version>RELEASE67</version>
+            <version>${netbeans.platform}</version>
             <type>nbm</type>
         </dependency>
+        
+        
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-lookup</artifactId>
+            <version>${netbeans.platform}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-ui</artifactId>
+            <version>${netbeans.platform}</version>
+        </dependency>   
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-netbeans-api-progress-nb</artifactId>
+            <version>${netbeans.platform}</version>
+        </dependency>   
+        
+        
     </dependencies>
 
     <build>
@@ -118,4 +137,5 @@
             </plugin>
         </plugins>
     </build>
+    
 </project>

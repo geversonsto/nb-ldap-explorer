@@ -22,43 +22,50 @@
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-filesystems</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-loaders</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-nodes</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-editor</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-parsing-api</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-text</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-netbeans-modules-lexer</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
         <dependency>
             <groupId>org.netbeans.api</groupId>
             <artifactId>org-openide-util</artifactId>
-            <version>RELEASE68</version>
+            <version>${netbeans.platform}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.netbeans.api</groupId>
+            <artifactId>org-openide-util-lookup</artifactId>
+            <version>${netbeans.platform}</version>
+        </dependency>
+        
     </dependencies>
 
     <build>

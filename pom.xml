@@ -42,9 +42,9 @@
 
     <repositories>
         <!-- this is a remote repository hosting the netbeans api artifacts.
-         the versions of the artifacts are netbeans IDE release based, eg. RELEASE65
-         You might want to use your own repository. To create one, use the nbm:populate-repository goal.
-          -->
+       the versions of the artifacts are netbeans IDE release based, eg. RELEASE65
+       You might want to use your own repository. To create one, use the nbm:populate-repository goal.
+        -->
         <repository>
             <id>netbeans</id>
             <name>repository hosting netbeans.org api artifacts</name>
@@ -75,7 +75,7 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>nbm-maven-plugin</artifactId>
-                    <version>3.14</version>
+                    <version>4.1</version>
                     <extensions>true</extensions>
                     <configuration>
                         <cluster>nb-ldap-bundle</cluster>
@@ -85,18 +85,21 @@
                         <netbeansInstallation>${netbeansInstallation}</netbeansInstallation>
                         <fileName>updates.xml</fileName>
                         <distBase>.</distBase>
+                        
+                        <!--<useOSGiDependencies>false</useOSGiDependencies>-->
+                        
                     </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.3</version>
+                    <version>3.0.0</version>
                 </plugin>
                 <plugin>
                     <!-- netbeans modules in 8+ are 1.6 compatible -->
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.3</version>
+                    <version>3.6.2</version>
                     <configuration>
                         <source>1.7</source>
                         <target>1.7</target>
@@ -113,10 +116,14 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.2</version>
+                    <version>3.0.2</version>
                     <configuration>
-                        <useDefaultManifestFile>true</useDefaultManifestFile>
+                        <!--<useDefaultManifestFile>true</useDefaultManifestFile>-->
                         <encoding>${project.build.sourceEncoding}</encoding>
+                        
+                        <archive>
+                            <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+                        </archive>
                     </configuration>
                 </plugin>
             </plugins>
@@ -125,14 +132,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.1</version>
+                <version>2.5.3</version>
             </plugin>
         </plugins>
     </build>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.platform>RELEASE67</netbeans.platform>
+        <netbeans.platform>RELEASE82</netbeans.platform>
         <!--
             License to include in the header of the file when filesa are created
             through the NetBeans IDE.
@@ -144,6 +151,7 @@
             The formatting guidelines are only active when using the NetBeans
             IDE. After changing code activate the "Source -> Format" option.
         -->
+        <!--
         <org-netbeans-modules-editor-indent.CodeStyle.usedProfile>project</org-netbeans-modules-editor-indent.CodeStyle.usedProfile>
         <org-netbeans-modules-editor-indent.CodeStyle.project.tab-size>8</org-netbeans-modules-editor-indent.CodeStyle.project.tab-size>
         <org-netbeans-modules-editor-indent.CodeStyle.project.text-limit-width>120</org-netbeans-modules-editor-indent.CodeStyle.project.text-limit-width>
@@ -171,6 +179,7 @@
         <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.wrapArrayInit>WRAP_IF_LONG</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.wrapArrayInit>
         <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.wrapFor>WRAP_IF_LONG</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.wrapFor>
         <org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.wrapThrowsList>WRAP_IF_LONG</org-netbeans-modules-editor-indent.text.x-java.CodeStyle.project.wrapThrowsList>
+        -->
     </properties>
 
     <modules>
